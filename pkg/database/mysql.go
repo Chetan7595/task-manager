@@ -9,7 +9,7 @@ import (
 )
 
 func Connect() (*sql.DB, error) {
-
+	
 	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true",
 		os.Getenv("DB_USER"),
 		os.Getenv("DB_PASSWORD"),

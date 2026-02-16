@@ -1,9 +1,12 @@
-package model
+package models
+
+import "time"
 
 type User struct {
-	Id       string
-	Name     string
-	Email    string
-	Password string
-	Role     string
+	ID        int64     `json:"id"`
+	Name      string    `json:"name"`
+	Email     string    `json:"email"`
+	Password  string    `json:"-"`
+	Role      string    `json:"role"`
+	CreatedAt time.Time `json:"created_at"`
 }

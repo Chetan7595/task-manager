@@ -9,9 +9,13 @@ import (
 	"github.com/Chetan7595/task-manager/internal/routes"
 	"github.com/Chetan7595/task-manager/pkg/database"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 func main() {
+
+	godotenv.Load()
+
 	gin.SetMode(gin.ReleaseMode)
 
 	router := gin.New()
@@ -28,7 +32,7 @@ func main() {
 
 	port := os.Getenv("PORT")
 	if port == "" {
-		port = "8080"
+		port = "8888"
 	}
 
 	srv := &http.Server {
